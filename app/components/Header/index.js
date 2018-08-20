@@ -1,12 +1,13 @@
-import * as React from 'react';
+import { connect } from 'react-redux';
+import Header from './Header';
 
-import NavLink from 'components/NavLink';
-import Logo from './Logo';
-import styles from './style.scss';
+const mapStateToProps = state => ({
+  theme: state.theme,
+});
 
-export default () => (
-  <div className={styles.header}>
-    <NavLink to="/sample" label="Sample" styles={styles} />
-    <Logo />
-  </div>
-);
+export default connect(
+  mapStateToProps,
+  null,
+  null,
+  { pure: false }
+)(Header);
