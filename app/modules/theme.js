@@ -2,6 +2,6 @@
 
 
 
-export default function themesReducer(state = 'theme2') {
+export default function themesReducer(state = 'theme1') {
   return state;
 }

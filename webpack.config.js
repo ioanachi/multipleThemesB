@@ -13,6 +13,7 @@ const sassThreadLoader = require('thread-loader');
 sassThreadLoader.warmup({ workerParallelJobs: 2 }, ['sass-loader', 'postcss-loader', 'css-loader', 'style-loader', 'babel-loader']);
 
 const host = process.env.HOST || 'localhost';
+const tenant = process.env.tenant;
 const port = process.env.PORT || 3000;
 const sourcePath = path.join(__dirname, './app');
 const buildDirectory = path.join(__dirname, './build');
@@ -46,6 +47,7 @@ module.exports = function(env) {
     new BuildProgressBar(),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(nodeEnv) },
+      'tenant': JSON.stringify(tenant),
     }),
 
     new HtmlWebpackPlugin({
