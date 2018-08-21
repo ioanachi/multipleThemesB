@@ -10,6 +10,9 @@
     "test:watch": "jest --watch",
     "coverage": "jest --coverage",
     "start": "webpack-dev-server",
+    "start:demco": "better-npm-run start:demco",
+    "start:mcall": "better-npm-run start:mcall",
+    "start:mumu": "better-npm-run start:mumu",
     "prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
     "build": "rimraf build && cross-env NODE_ENV=production webpack --env.prod=true --env.sw=true",
     "serve": "pushstate-server build/ 3000",
@@ -18,6 +21,26 @@
     "lint:fix": "eslint ./app -f table --fix",
     "dll": "webpack --config webpack.dll.js",
     "postinstall": "rimraf .cache-loader & npm run dll"
+  },
+  "betterScripts": {
+    "start:demco": {
+      "command": "webpack-dev-server",
+      "env": {
+        "TENANT": "demco"
+      }
+    },
+    "start:mcall": {
+      "command": "webpack-dev-server",
+      "env": {
+        "TENANT": "mcall"
+      }
+    },
+    "start:mumu": {
+      "command": "webpack-dev-server",
+      "env": {
+        "TENANT": "mumu"
+      }
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.54",
@@ -73,6 +96,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.54",
     "babel-runtime": "^7.0.0-beta.3",
+    "better-npm-run": "^0.1.1",
     "cache-loader": "^1.0.3",
     "classnames": "^2.2.6",
     "d3": "^5.5.0",

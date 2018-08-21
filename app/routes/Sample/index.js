@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Chunk from 'components/Chunk';
 
 const loadSampleContainer = () => {
-  debugger;
   return import('containers/Sample' /* webpackChunkName: "sample" */)
 };
 

@@ -1,6 +1,6 @@
 export default {
-  logo: 'logo.png',
-  applicationTitle: 'Demco',
+  logo: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/AngularJS_logo.svg',
+  applicationTitle: 'MCall',
   enableLocation: true,
   userMenu: {
     profile: true,

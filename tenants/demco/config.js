@@ -1,5 +1,5 @@
 export default {
-  logo: 'logo.png',
+  logo: 'https://logos-download.com/wp-content/uploads/2016/09/React_logo_wordmark.png',
   applicationTitle: 'Demco',
   enableLocation: true,
   userMenu: {
